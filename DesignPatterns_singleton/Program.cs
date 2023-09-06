@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using DesignPatterns_singleton;
+﻿using DesignPatterns_singleton;
 
 // Create multiple threads that use the Logger.
 Task[] tasks = new Task[5];
@@ -10,7 +9,7 @@ for (int i = 0; i < tasks.Length; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            Logger.getInstance().Log($"Thread {threadId} - Log Entry {j}");
+            ConsoleLogger.GetInstance().LogInfo($"Thread {threadId} - Log Entry {j}");
         }
     });
 }
@@ -21,8 +20,8 @@ Task.WaitAll(tasks);
 Console.WriteLine("Logging complete.");
 
 
-Logger logger = Logger.getInstance();
-logger.Log("hello from logger");
-Logger.getInstance().Log("Hello 2");
-Logger logger2 = Logger.getInstance();
+ConsoleLogger logger = ConsoleLogger.GetInstance();
+logger.LogWarning("hello from logger");
+ConsoleLogger.GetInstance().LogError("Hello 2");
+ConsoleLogger logger2 = ConsoleLogger.GetInstance();
 Console.WriteLine(logger == logger2);
