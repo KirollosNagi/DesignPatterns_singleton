@@ -8,8 +8,8 @@ namespace DesignPatterns_singleton
 {
     public class Logger
     {
-        private static Logger _instance;
-        private static readonly object _instanceLock = new object();
+        private static readonly Lazy<Logger> lazyInstance = new Lazy<Logger>(() => new Logger());
+        private static readonly object _Lock = new object();
         
         private Logger() {
             Console.WriteLine("logger created!");
@@ -17,22 +17,12 @@ namespace DesignPatterns_singleton
 
         public static Logger getInstance()
         {
-            if (_instance == null)
-            {
-                lock (_instanceLock)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new Logger();
-                    }
-                }
-            }
-            return _instance;
+            return lazyInstance.Value;
         }
 
         public void Log(string message)
         {
-            lock (_instanceLock)
+            lock (_Lock)
             {
                 Console.WriteLine($"[INFO] {DateTime.Now}: {message}");
             }
