@@ -13,6 +13,7 @@ namespace DesignPatterns_singleton
         private Logger() {
             Console.WriteLine("logger created!");
         }
+
         public static Logger getInstance()
         {
             if (_instance == null)
@@ -26,8 +27,5 @@ namespace DesignPatterns_singleton
         {
             Console.WriteLine(message);
         }
-
-
-
     }
 }
