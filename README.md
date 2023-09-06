@@ -7,3 +7,5 @@ The singelton design pattern is one of the creational design patterns that are u
 I am implementing a simple singleton logger here to show the importance and significance of this design pattern. 
 
 I have also went ahead afterwards and made the logger thread-safe to work with multithreading applications and remain a singleton.
+
+Then lastly, I went ahead and used lazy initialization instead of actually worrying about initialization using locking.
