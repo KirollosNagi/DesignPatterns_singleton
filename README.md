@@ -8,4 +8,8 @@ I am implementing a simple singleton logger here to show the importance and sign
 
 I have also went ahead afterwards and made the logger thread-safe to work with multithreading applications and remain a singleton.
 
-Then lastly, I went ahead and used lazy initialization instead of actually worrying about initialization using locking.
+Furthermore, I went ahead and used lazy initialization instead of actually worrying about initialization using locking.
+
+Moreover, I decided to expand this project to have multiple singleton loggers so I added ConsoleLogger and FileLogger that both implement the ILogger interface.
+
+I added a glimpse of a singleton factory to create, access, and use loggers from external projects while maintaining the singleton concepts.
