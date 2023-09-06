@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns_singleton", "DesignPatterns_singleton\DesignPatterns_singleton.csproj", "{51878BCF-36B6-4020-9127-3EAFF6246B28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverProject", "DriverProject\DriverProject.csproj", "{86B57F36-B523-4706-A04A-1FB92AE71F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{51878BCF-36B6-4020-9127-3EAFF6246B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51878BCF-36B6-4020-9127-3EAFF6246B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51878BCF-36B6-4020-9127-3EAFF6246B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B57F36-B523-4706-A04A-1FB92AE71F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B57F36-B523-4706-A04A-1FB92AE71F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B57F36-B523-4706-A04A-1FB92AE71F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B57F36-B523-4706-A04A-1FB92AE71F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
