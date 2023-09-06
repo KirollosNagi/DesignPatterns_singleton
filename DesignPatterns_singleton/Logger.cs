@@ -9,6 +9,7 @@ namespace DesignPatterns_singleton
     public class Logger
     {
         private static Logger _instance;
+        private static readonly object _instanceLock = new object();
         
         private Logger() {
             Console.WriteLine("logger created!");
@@ -18,14 +19,23 @@ namespace DesignPatterns_singleton
         {
             if (_instance == null)
             {
-                _instance = new Logger();
+                lock (_instanceLock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new Logger();
+                    }
+                }
             }
             return _instance;
         }
 
         public void Log(string message)
         {
-            Console.WriteLine(message);
+            lock (_instanceLock)
+            {
+                Console.WriteLine($"[INFO] {DateTime.Now}: {message}");
+            }
         }
     }
 }
