@@ -20,4 +20,8 @@ Task.WaitAll(tasks);
 
 Console.WriteLine("Logging complete.");
 
-
+ILogger logger = LoggerFactory.GetConsoleLogger();
+logger.LogWarning("hello from logger");
+LoggerFactory.GetConsoleLogger().LogError("Hello 2");
+ILogger logger2 = LoggerFactory.GetConsoleLogger();
+Console.WriteLine(logger == logger2);
